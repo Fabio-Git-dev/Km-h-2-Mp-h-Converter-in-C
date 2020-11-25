@@ -4,53 +4,115 @@
 
  int main() {  //beginning of the function
 
-
-
-    float mp_h;
-	float km_h = 1.609; //variables
-	float conversion;
+    float conversion;  //variable operands
 	float conversion_reverse;
-	int choise;
-
- do {
 
 
-    printf("km/h2mp/h converter by Fabio - v1.0a \n");
-
-	printf("Insert mp-h number \n");
-	scanf("%f", &mp_h);
-
-	conversion = mp_h * km_h; //operand for conversion
+    int choice;
+	float mp_h;
+	float km_h = 1.609; //variables for choice
 
 
-	printf("Converting to km-h... \n");
-
-    printf("%f\n", conversion); //output operand
-
-    //Reverse Operation.
-
-    printf("Insert km_h number \n");
-	scanf("%f", &km_h);
-
-	conversion_reverse = km_h / mp_h; //operand for conversion_reverse
-
-
-	printf("Converting to mp-h... \n");
+	int decision; //variables for decision
+	int yes;
+	int no;
 
 
 
-    printf("%f\n", conversion_reverse); //output operand
 
-    printf("Do you want to continue? 1 (yes) 2(no) \n");
+	printf("km/h2mp/h converter by Fabio - v1.0a \n");
 
-    scanf("%d", &choise);
+	do {
+	    printf("Wich unit do you want to convert? 1(Mp/h) 2(km/h) 3(Exit)\n"); //Unit choice.
+	scanf("%d", &choice);
 
-  } while (choise == 1);
 
 
-      system("PAUSE");
 
-      return 0;
+
+switch (choice) {
+
+  case 1:
+
+      do {
+         printf("Insert mp/h number \n");
+	     scanf("%f", &mp_h);
+
+         conversion = mp_h * km_h; //operand for conversion
+
+
+	     printf("Converting to km/h... \n");
+
+         printf("%f\n", conversion); //output operand
+
+         printf("Do you want to continue? 1(Yes) 2(No) \n");
+         scanf("%d", &decision);
+
+      } while (decision == 1);
+
+
+         break; //pause instruction.
+
+
+
+  case 2:
+
+      do {
+         printf("Insert km/h number \n");
+	     scanf("%f", &km_h);
+
+	     conversion = km_h / mp_h; //operand for conversion
+
+
+	     printf("Converting to km/h... \n");
+
+         printf("%f\n", conversion); //output operand
+
+         printf("Do you want to continue? 1(Yes) 2(No) \n");
+         scanf("%d", &decision);
+
+      } while (decision == 1);
+
+	     break;
+
+
+  default://any value that it's not recognized inside the switch parameter.
+
+           printf("Exiting program...");
+
+           system("PAUSE");
+
+           break;
+	}
+
+
+	} while (choice !=3);
+
+
+
 
  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
