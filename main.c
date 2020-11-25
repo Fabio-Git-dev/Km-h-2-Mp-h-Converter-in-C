@@ -14,8 +14,7 @@
 
 
 	int decision; //variables for decision
-	int yes;
-	int no;
+
 
 
 
@@ -30,9 +29,9 @@
 
 
 
-switch (choice) {
+switch (choice) { //using switch for multiple cases, linked to the user choise.
 
-  case 1:
+  case 1: //mp_h 2 km_H
 
       do {
          printf("Insert mp/h number \n");
@@ -55,7 +54,7 @@ switch (choice) {
 
 
 
-  case 2:
+  case 2: //km_h 2 mp_h
 
       do {
          printf("Insert km/h number \n");
@@ -76,9 +75,9 @@ switch (choice) {
 	     break;
 
 
-  default://any value that it's not recognized inside the switch parameter.
+  default:  //any value that it's not recognized inside the switch parameter. Used to exit the program.
 
-           printf("Exiting program...");
+           printf("Exiting program...\n");
 
            system("PAUSE");
 
@@ -86,7 +85,7 @@ switch (choice) {
 	}
 
 
-	} while (choice !=3);
+	} while (choice !=3); //has to be different from number 3, or else it will close)
 
 
 
